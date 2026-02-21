@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medication Count Sheet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="sheet">
+      <header class="sheet-header">
+        <div class="brand">
+          <h1>PATE</h1>
+          <p>REHABILITATION</p>
+        </div>
+        <h2>Medication Count Sheet</h2>
+      </header>
+
+      <section class="campus-row">
+        <label><input type="checkbox" /> VC</label>
+        <label><input type="checkbox" /> Towne Lake</label>
+        <label><input type="checkbox" /> BCR Hilltop</label>
+        <label><input type="checkbox" checked /> BCR Main</label>
+        <label><input type="checkbox" /> BCR West</label>
+        <label><input type="checkbox" /> BCR Tx</label>
+        <label><input type="checkbox" /> Savanna Oaks</label>
+        <label><input type="checkbox" /> Other:</label>
+      </section>
+
+      <p class="note">*** All information below should be taken from the label on the medication and must match the MAR and physician's order ***</p>
+
+      <section class="details-grid">
+        <label>Patient's Name:<input type="text" /></label>
+        <label>Pharmacy Name:<input type="text" /></label>
+        <label>Medication Name:<input type="text" /></label>
+        <label>Prescription #:<input type="text" /></label>
+        <label>Strength of Medication:<input type="text" /></label>
+        <label>Physician Name:<input type="text" /></label>
+      </section>
+
+      <section class="notes-area">
+        <label>Directions:<textarea rows="3"></textarea></label>
+        <label>Other:<textarea rows="3"></textarea></label>
+      </section>
+
+      <section class="table-controls">
+        <button id="add-row" type="button">Add Row</button>
+        <button id="clear-rows" type="button">Clear Entries</button>
+      </section>
+
+      <table class="count-table" id="count-table">
+        <thead>
+          <tr>
+            <th>Count</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Counter #1</th>
+            <th>Counter #2</th>
+            <th>Refills Remaining<br /><small>*Update with each new delivery</small></th>
+            <th>Additional Information</th>
+          </tr>
+        </thead>
+        <tbody id="count-body"></tbody>
+      </table>
+
+      <footer class="sheet-footer">
+        <span>Revised: 4-12-2023</span>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
